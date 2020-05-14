@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
@@ -10,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function PwaButton({ variant, label, onSubmit, color }) {
+export default function CustomButton({ variant, label, onSubmit, color }) {
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -20,3 +21,10 @@ export default function PwaButton({ variant, label, onSubmit, color }) {
     </div>
   );
 }
+
+CustomButton.propTypes = {
+  label: PropTypes.string,
+  variant: PropTypes.string,
+  onSubmit: PropTypes.func,
+  color: PropTypes.string
+};

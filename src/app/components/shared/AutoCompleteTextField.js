@@ -1,8 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 
 export default function AutoCompleteSearchBox({
+  id,
    label,
    inputValue,
    setInputValue,
@@ -13,9 +15,6 @@ export default function AutoCompleteSearchBox({
 
   return (
     <div>
-      {/* <div>{`value: ${value !== null ? `'${value}'` : 'null'}`}</div>
-      <div>{`inputValue: '${inputValue}'`}</div>
-      <br /> */}
       <Autocomplete
         value={value}
         onChange={(event, newValue) => {
@@ -25,7 +24,7 @@ export default function AutoCompleteSearchBox({
         onInputChange={(event, newInputValue) => {
           setInputValue(newInputValue);
         }}
-        id="controllable-states-demo"
+        id={id ? id : "controllable-states-demoid"}
         options={options}
         style={{ maxWidth: 200 }}
         renderInput={(params) => <TextField {...params} label={label} variant="outlined" />}
@@ -33,3 +32,10 @@ export default function AutoCompleteSearchBox({
     </div>
   );
 }
+
+AutoCompleteSearchBox.propTypes = {
+  label: PropTypes.string,
+  inputValue: PropTypes.string,
+  setInputValue: PropTypes.func,
+  optionList: PropTypes.array
+};

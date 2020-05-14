@@ -28,6 +28,7 @@ function SearchBox(props) {
     <Grid item xs={12} sm={12} md={12} lg={12} container direction="row">
       <Grid item xs={12} sm={4} md={4} lg={3}>
         <AutoComplete
+        id="searchKing"
         label="Search By king"
           inputValue={state.king}
           setInputValue={handleKing}
@@ -35,6 +36,7 @@ function SearchBox(props) {
       </Grid>
       <Grid item xs={12} sm={4} md={3} lg={3}>
         <AutoComplete
+        id="searchBattle"
         label="Battle type"
           inputValue={state.type}
           setInputValue={handleType}
@@ -42,6 +44,7 @@ function SearchBox(props) {
       </Grid>
       <Grid item xs={12} sm={4} md={3} lg={3}>
         <AutoComplete
+        id="searchLoc"
           label="Location"
           inputValue={state.location}
           setInputValue={handleLocation}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Slider from 'react-animated-slider';
 import Grid from '@material-ui/core/Grid';
 import 'react-animated-slider/build/horizontal.css';
@@ -10,7 +10,7 @@ import backGroungImage from '../asset/img/battle_2.jpg';
 import logo_1 from '../asset/icon/logo_1.jpg';
 import logo_2 from '../asset/icon/logo_3.jpg';
 import icon_1 from '../asset/icon/skull.jpg';
-import icon_2 from '../asset/icon/heart_rate.jpg';
+import icon_2 from '../asset/icon/icon_2.png';
 import icon_3 from '../asset/icon/icon_3.png';
 
 import '../components/index.css';
