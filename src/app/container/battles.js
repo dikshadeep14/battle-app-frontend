@@ -7,13 +7,15 @@ import { connect } from "react-redux";
 import { getSearchedData, getList } from '../actions/listAction';
 import SearchBox from './search';
 import backGroungImage from '../asset/img/battle_2.jpg';
-import logo_1 from '../asset/icon/logo_1.jpg';
-import logo_2 from '../asset/icon/logo_3.jpg';
-import icon_1 from '../asset/icon/skull.jpg';
-import icon_2 from '../asset/icon/icon_2.png';
-import icon_3 from '../asset/icon/icon_3.png';
+import logo_1 from '../asset/icon/logo_1.PNG';
+import logo_2 from '../asset/icon/logo_2.PNG';
+import icon_1 from '../asset/icon/icon_1.PNG';
+import icon_2 from '../asset/icon/icon_2.PNG';
+import icon_3 from '../asset/icon/icon_3.PNG';
 
-import '../components/index.css';
+import CustomModal from '../components/modal';
+
+import './index.css';
 
 const Battles = (props) => {
   const { listData, searchedData } = props;
@@ -93,15 +95,80 @@ const Battles = (props) => {
   }
 
   return (
-    <div>
-      {props.listData && <SearchBox />}
-      <div className='slider_container'>
-        <Slider>
-          {newsTemplate}
-        </Slider>
-      </div>
+    <CustomModal show={true} >
+      <Grid item xs={12} md={12} style={{height: '100%' }}>
+        <Grid item xs={11} md={9} style={{height: '100%', margin: 'auto'}}>
+        <div style={{height: 50, opacity: 0.3}}>
+          <div className='title' style={{marginTop: 0, fontSize: 12}}>
+            Today's Battle
+          </div>          
+          <div className='title' style={{marginTop: 10, fontSize: 18}}>battle of the bastards</div>
+        </div>
+        <div  style={{ background: `url('${backGroungImage}') no-repeat center center`}} className='image_container'>
+          <Grid item xs={12} md={12} container direction='row' style={{height: '100%'}} >
+            <Grid item xs={6} md={6} style={{ backgroundColor: '#2a3035', opacity: 0.6}}>
 
-    </div>
+            </Grid>
+            <Grid item xs={6} md={6} style={{ backgroundColor: '#1d2124', opacity: 0.7}}>
+
+            </Grid>
+          </Grid>
+        </div>
+        <Grid container direction='row' justify="space-between" item xs={11} md={10} style={{height: 50, margin: 'auto'}}>
+          <Grid container direction='row' item xs={6} md={6} style={{height: 50, backgroundColor: '#1c2028'}}>
+            <div style={{padding: '0px 10px 0px 0px'}}>
+              <img src={logo_1} alt='' className='logo_size' />
+            </div>
+
+            <div style={{ display: 'flex', padding: '0px 10px 0px 0px', alignItem: 'center', height: 50 }}>
+              <img src={icon_1} alt='' style={{ width: 30, height: 30, alignSelf: 'center' }} />
+              <p className='title font_small'>180</p>
+            </div>
+
+            <div style={{ display: 'flex', padding: '0px 10px 0px 0px', alignItem: 'center', height: 50 }}>
+              <img src={icon_2} alt='' style={{ width: 30, height: 30, alignSelf: 'center' }} />
+              <p className='title font_small'>90</p>
+            </div>
+
+            <div style={{ display: 'flex', padding: '0px 10px 0px 0px', alignItem: 'center', height: 50 }}>
+              <img src={icon_3} alt='' style={{ width: 30, height: 30, alignSelf: 'center' }} />
+              <p className='title font_small'>40%</p>
+            </div>
+          </Grid>
+          <Grid container direction='row' item xs={6} md={6} style={{height: 50, backgroundColor: '#1c2028'}}>
+          <div style={{ display: 'flex', padding: '0px 0px 0px 10px', alignItem: 'center', height: 50 }}>
+              <img src={icon_1} alt='' style={{ width: 30, height: 30, alignSelf: 'center' }} />
+              <p className='title font_small'>150</p>
+            </div>
+
+            <div style={{ display: 'flex', padding: '0px 0px 0px 10px', alignItem: 'center', height: 50 }}>
+              <img src={icon_2} alt='' style={{ width: 30, height: 30, alignSelf: 'center' }} />
+              <p className='title font_small'>50</p>
+            </div>
+
+            <div style={{ display: 'flex', padding: '0px 0px 0px 10px', alignItem: 'center', height: 50 }}>
+              <img src={icon_3} alt='' style={{ width: 30, height: 30, alignSelf: 'center' }} />
+              <p className='title font_small'>30%</p>
+            </div>
+            <div style={{padding: '0px 0px 0px 10px'}}>
+              <img src={logo_2} alt='' className='logo_size' />
+            </div>
+          </Grid>
+        </Grid>
+        
+        </Grid>
+        
+      </Grid>
+      </CustomModal>
+    // <Grid item xs={12} md={10} className="container center_grid">
+      
+    //   {props.listData && <SearchBox />}
+    //   <div className='slider_container'>
+    //     <Slider>
+    //       {newsTemplate}
+    //     </Slider>
+    //   </div>
+    // </Grid>
   )
 }
 
