@@ -97,7 +97,7 @@ const Battles = (props) => {
   return (
     <CustomModal show={true} >
       <Grid item xs={12} md={12} style={{height: '100%' }}>
-        <Grid item xs={11} md={9} style={{height: '100%', margin: 'auto'}}>
+        <Grid item xs={11} md={7} style={{height: '100%', margin: 'auto'}}>
         <div style={{height: 50, opacity: 0.3}}>
           <div className='title' style={{marginTop: 0, fontSize: 12}}>
             Today's Battle
@@ -114,7 +114,7 @@ const Battles = (props) => {
             </Grid>
           </Grid>
         </div>
-        <Grid container direction='row' justify="space-between" item xs={11} md={10} style={{height: 50, margin: 'auto'}}>
+        <Grid container direction='row' justify="space-between" item xs={11} md={11} style={{height: 50, margin: 'auto'}}>
           <Grid container direction='row' item xs={6} md={6} style={{height: 50, backgroundColor: '#1c2028'}}>
             <div style={{padding: '0px 10px 0px 0px'}}>
               <img src={logo_1} alt='' className='logo_size' />
@@ -136,21 +136,21 @@ const Battles = (props) => {
             </div>
           </Grid>
           <Grid container direction='row' item xs={6} md={6} style={{height: 50, backgroundColor: '#1c2028'}}>
-          <div style={{ display: 'flex', padding: '0px 0px 0px 10px', alignItem: 'center', height: 50 }}>
+          <div style={{ display: 'flex', marginLeft: 'auto', alignItem: 'center', height: 50 }}>
               <img src={icon_1} alt='' style={{ width: 30, height: 30, alignSelf: 'center' }} />
               <p className='title font_small'>150</p>
             </div>
 
-            <div style={{ display: 'flex', padding: '0px 0px 0px 10px', alignItem: 'center', height: 50 }}>
+            <div style={{ display: 'flex', marginLeft: 'auto', alignItem: 'center', height: 50 }}>
               <img src={icon_2} alt='' style={{ width: 30, height: 30, alignSelf: 'center' }} />
               <p className='title font_small'>50</p>
             </div>
 
-            <div style={{ display: 'flex', padding: '0px 0px 0px 10px', alignItem: 'center', height: 50 }}>
+            <div style={{ display: 'flex', marginLeft: 'auto', alignItem: 'center', height: 50 }}>
               <img src={icon_3} alt='' style={{ width: 30, height: 30, alignSelf: 'center' }} />
               <p className='title font_small'>30%</p>
             </div>
-            <div style={{padding: '0px 0px 0px 10px'}}>
+            <div style={{marginLeft: 'auto'}}>
               <img src={logo_2} alt='' className='logo_size' />
             </div>
           </Grid>
